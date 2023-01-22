@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+        <link rel="stylesheet" href="/css/style.css">
+        <nav class="navbar">
+            <ul class="navlist">
+				<li class="navitem"><a href="index.html">Home</a></li>
+				<li class="navitem"><a href="/flight">Flight</a></li>
+				<li class="navitem"><a href="/plane">Plane</a></li>
+				<li class="navitem"><a href="/city">City</a></li>
+				<li class="navitem"><a href="/airport">Airport</a></li>
+				<li class="navitem"><a href="/flight_passenger">Flight Passenger</a></li>
+				<li class="navitem"><a href="/passenger">Passengers</a></li>
+            </ul>
+        </nav> 
+<head>
+	<title>Demo Page</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    {{#each jsscripts}}
+    <script src="/static/{{this}}"></script>
+    {{/each}}
+</head>
+<body>
+	{{{body}}}
+</body>
+</html>
