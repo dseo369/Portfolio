@@ -1,0 +1,38 @@
+<body>
+            <div class="post-data-sides"></div>
+            <div class="post-data" id="posts"> 
+                {{#each posts}}
+                {{>post name=this.name date=this.date postContent=this.postContent}}
+                {{/each}}</div>
+            <div class="post-data-sides"></div>
+        </body>
+        <div class="bottomNav">
+
+            <div class="userPFP">
+                <img src="https://cdn.discordapp.com/attachments/910645752815054861/918789034778705940/default.jpg" alt="TheRock">
+            </div>
+
+            <div class="userProfile">
+            <p id="authorname">New User</p>
+            <div>   
+                <div class="text-input">
+                    <input id="authortextBar" maxlength="10" placeholder="enter name">
+                </div>
+        
+                <div class="text-button">
+                    <input id="authorinputButton" type="button" value="Enter">
+                </div>
+            </div>
+            </div>
+
+            <div class="text-input">
+                <input id="textBar" maxlength="10" placeholder="makeapost?">
+            </div>
+
+            <div class="text-button">
+                <input id="inputButton" type="button" value="Enter">
+            </div>
+        </div>
+        <div class="profileModal">
+                
+        </div>
