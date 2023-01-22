@@ -1,0 +1,13 @@
+<html>
+<h1>Update Plane # {{Plane.modelID}}:</h1>
+<form id="update-plane" action="/plane" method="post">
+    type: <input type="text" name="type" value="{{Plane.type}}"><br>
+    location: <select name='locationName'>
+    {{#each Airport}}
+    <option value='{{name}}'>{{name}}</option>
+    {{/each}}
+    </select>
+
+</form>
+<button onclick="updatePlane({{Plane.modelID}})">Update</button>
+</html>

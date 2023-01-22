@@ -1,0 +1,41 @@
+<html>
+<h1><b>City Overview</b></h1>
+<h3>The City entity's purpose is to hold information about the specific city that
+Airports and Flights use as locations/destinations respectively. Has a 1:M
+relationship with Airport since a single city may have multiple Airports, and a 
+1:M relationship with Flight, since 1 city has many flights coming in/out of it.				
+</h3>  
+<b>
+<h3>Add new City:</h3>
+<form id="addcity" action="/city" method="post">
+    name: <input type="text" name="name"><br>
+	country: <input type="text" name="location"><br>
+    <input type="submit" value="Submit">
+ </form>
+<br/>
+
+
+<form id='search_city' action='' method=''>
+    <label> Search for a city based on the name or its country of origin: </label>
+    <input id='name_location_search_string' type='text' name='name_location_search_string' value=''>
+    <input type="button" value="Search" onclick="searchCityNameLocation()">
+</form>
+
+<h3>Current Cities in operation:</h3>
+<table>
+    <thead> 
+        <th>name</th> 
+        <th>Country:</th> 
+    </thead> 
+    <tbody>
+        {{#each City}} 
+        <tr> 
+            <td>{{name}}</td> 
+            <td>{{location}}</td> 
+            <td><button onclick='deleteCity("{{name}}","{{location}}")'>Delete</button></td>
+            <td><a href="/city/{{name}}/{{location}}">Update</a></td>
+        </tr> 
+        {{/each}} 
+    </tbody> 
+</table> 
+</html>

@@ -1,0 +1,47 @@
+<html>
+
+            <h1><b>Plane Overview</b></h1>
+            <h3>The Plane entity’s purpose is to store the information of the plane’s model and
+				type. The relationship is 1:M with Airport as there can be many planes at many
+				airports.					
+            </h3>       
+<b>
+<h3>Add new Plane:</h3>
+<form id="addplane" action="/plane" method="post">
+    location: <select name='locationName'>
+        {{#each Airport}}
+          <option value='{{name}}'>{{name}}</option>
+        {{/each}}
+    </select>
+    Type: <input type="text" name="type"><br>
+    <input type="submit" value="Submit">
+ </form>
+<br/>
+
+
+<form id='search_plane' action='' method=''>
+    <label> Search plane based on type or location:</label>
+    <input id='type_location_search_string' type='text' name='type_location_search_string' value=''>
+    <input type="button" value="Search" onclick="searchPlaneTypeLocation()">
+</form>
+
+<h3>Current Planes in use:</h3>
+<table>
+    <thead> 
+        <th>modelID</th> 
+        <th>Type</th> 
+        <th>Location</th> 
+    </thead> 
+    <tbody>
+        {{#each Plane}} 
+        <tr> 
+            <td>{{modelID}}</td> 
+            <td>{{type}}</td> 
+            <td>{{airport}}</td> 		
+            <td><button onclick="deletePlane({{modelID}})">Delete</button></td>
+            <td><a href="/plane/{{modelID}}">Update</a></td>
+        </tr> 
+        {{/each}} 
+    </tbody> 
+</table> 
+</html>

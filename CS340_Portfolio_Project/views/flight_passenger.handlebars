@@ -1,0 +1,47 @@
+<html>
+<div>
+
+            <h1><b>Flight_Passenger Overview</b></h1>
+            <h3>An entity to faciliate the assocation between a Flight and a Passenger			
+            </h3>               
+			<br>
+
+<h3> Associate passenger with a flight </h3>
+    <form id="addFlightPassenger" action="/flight_passenger" method="post">
+    Passenger: <select name='accountID'>
+        {{#each Passenger}}
+          <option value='{{accountID}}'>{{first_name}} {{last_name}}</option>
+        {{/each}}
+    </select>
+    <br>
+    <form id="addFlightPassenger" action="/flight_passenger" method="post">
+    Flight: <select name='flightID'>
+        {{#each Flight}}
+          <option value='{{flightID}}'>{{flightID}} {{from}} {{to}}</option>
+        {{/each}}
+    </select>
+    <input type="submit" value="Submit">
+    </form>
+</div>
+<br/>
+<h3> List of Passengers and their Flights</h3>
+<table>
+    <thead> 
+        <th>Passenger</th> 
+        <th>Flight</th> 
+    </thead> 
+    <tbody> 
+        {{#each flight_passenger}} 
+        <tr> 
+            <td>{{name}}</td> 
+            <td>{{fID}}</td> 
+            <td><button onclick="deleteFlightPassenger({{accountID}},{{fID}})">Delete</button></td>
+            <td><a href='#' onclick='javascript: alert("You can implement it just like the Add form.")'>Update</a></td>
+        </tr>
+        {{else}}
+        <b> No Passengers with flights detected </b>
+        {{/each}} 
+
+    </tbody>
+</table> 
+</html>

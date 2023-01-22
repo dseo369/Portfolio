@@ -1,0 +1,13 @@
+<html>
+<h1>Update {{Airport.name}}:</h1>
+<form id="update-airport" action="/airport" method="post">
+    name: <input type="text" name="name" value="{{Airport.name}}"><br>
+    location: <select name='cityName'>
+    {{#each City}}
+    <option value='{{name}}'>{{name}}, {{location}}</option>
+    {{/each}}
+    </select>	
+
+</form>
+<button onclick="updateAirport('{{Airport.name}}')">Update</button>
+</html>

@@ -1,0 +1,46 @@
+<html>
+            <h1><b>Airport Overview</b></h1>
+            <h3>The purpose of the Airport entity is to house information that identifies which
+				Airport a plane is currently located at. Refers to City to provide its location. It
+				maintains a 1:1 relationship with City as the Airport itself does not move, and a
+				1:M relationship with a Plane as there can be many planes at 1 airport.				
+            </h3>     
+<b>
+
+<h3>Add new Airport:</h3>
+<form id="addairport" action="/airport" method="post">
+    City Location: <select name='cityName'>
+        {{#each City}}
+          <option value='{{name}}'>{{name}}, {{location}}</option>
+        {{/each}}
+    </select>
+    name: <input type="text" name="name"><br>
+    <input type="submit" value="Submit">
+ </form>
+<br/>
+
+
+<form id='search_airport' action='' method=''>
+    <label> Search for an Airport based on its name or its city location:</label>
+    <input id='name_location_search_string' type='text' name='name_location_search_string' value=''>
+    <input type="button" value="Search" onclick="searchAirportNameLocation()">
+</form>
+
+<h3>Current Airports:</h3>
+<table>
+    <thead> 
+        <th>name</th> 
+        <th>location</th> 
+    </thead> 
+    <tbody>
+        {{#each Airport}} 
+        <tr> 
+            <td>{{name}}</td> 
+            <td>{{location}}</td> 
+            <td><button onclick="deleteAirport('{{name}}')">Delete</button></td>
+            <td><a href="/airport/{{name}}">Update</a></td>
+        </tr> 
+        {{/each}} 
+    </tbody> 
+</table> 
+</html>

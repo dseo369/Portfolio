@@ -1,0 +1,10 @@
+<html>
+<h1>Update {{City.name}} , {{City.location}} :</h1>
+<form id="update-city" action="/city" method="post">
+    name: <input type="text" name="name" value="{{City.name}}"><br>
+    location:<input type="text" name="location" value="{{City.location}}"><br>
+
+
+</form>
+<button onclick="updateCity('{{City.name}}','{{City.location}}')">Update</button>
+</html>

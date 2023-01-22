@@ -1,0 +1,44 @@
+<html>
+            <h1><b>Passenger Overview</b></h1>
+            <h3>The Passenger entity's purpose is to record the specific person who took a specific
+				flight. Since the information of passengers was too complex to be a single
+				attribute in the flight entity, it is instead its separate one. The passenger entity
+				maintains a 1:M relationship with Flight as a single passenger can go on many
+				Flights.		
+            </h3>    
+<b>
+<h3>Add new passenger:</h3>
+<form id="addpassenger" action="/passenger" method="post">
+    First name: <input type="text" name="first_name"><br>
+    Last name: <input type="text" name="last_name"><br>
+    <input type="submit" value="Submit">
+ </form>
+<br/>
+
+
+<form id='search_passenger' action='' method=''>
+    <label> Search passenger for first name starting with:</label>
+    <input id='first_name_search_string' type='text' name='first_name_search_string' value=''>
+    <input type="button" value="Search" onclick="searchpassengerByFirstName()">
+</form>
+
+<h3>Current passenger:</h3>
+<table>
+    <thead> 
+        <th>accountID</th> 
+        <th>First Name</th> 
+        <th>Last Name</th> 
+    </thead> 
+    <tbody>
+        {{#each Passenger}} 
+        <tr> 
+            <td>{{accountID}}</td> 
+            <td>{{first_name}}</td> 
+            <td>{{last_name}}</td> 		
+            <td><button onclick="deletePassenger({{accountID}})">Delete</button></td>
+            <td><a href="/passenger/{{accountID}}">Update</a></td>
+        </tr> 
+        {{/each}} 
+    </tbody> 
+</table> 
+</html>

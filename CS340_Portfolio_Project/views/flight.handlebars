@@ -1,0 +1,48 @@
+<html>
+
+            <h1><b>Flight Overview</b></h1>
+            <h3>The flight entity records the details of a single flight from point A to point B,
+				connecting flights would be two separate flights. Each flight will store data of
+				each Passenger through the passengers account_Id. Maintains a 1:M relationship
+				with Passenger as there are many passengers on one flight.			
+            </h3>         
+			<b>
+
+<h3>Add new Flight:</h3>
+<form id="addflight" action="/flight" method="post">
+    from: <input type="text" name="from"><br>
+    to: <input type="text" name="to"><br>
+	ETA: <input type="text" name="eta"><br>
+    <input type="submit" value="Submit">
+ </form>
+<br/>
+
+
+<form id='search_flight' action='' method=''>
+    <label> Search for a flight that begins or ends in: </label>
+    <input id='searchfromto_string' type='text' name='searchfromto_string' value=''>
+    <input type="button" value="Search" onclick="searchFromTo()">
+</form>
+
+<h3>Current flights:</h3>
+<table>
+    <thead> 
+        <th>flight ID</th> 
+        <th>From</th> 
+        <th>To</th> 
+        <th>ETA</th>
+    </thead> 
+    <tbody>
+        {{#each flight}} 
+        <tr> 
+            <td>{{flightID}}</td> 
+            <td>{{"'from'"}}</td> 
+            <td>{{"'to'"}}</td> 
+            <td>{{eta}} Minutes</td> 			
+            <td><button onclick="deleteFlight({{flightID}})">Delete</button></td>
+            <td><a href="/flight/{{flightID}}">Update</a></td>
+        </tr> 
+        {{/each}} 
+    </tbody> 
+</table> 
+</html>

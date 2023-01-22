@@ -1,0 +1,10 @@
+<html>
+<h1>Update Flight # {{Flight.flightID}}:</h1>
+<form id="update-flight" action="/flight" method="post">
+    From: <input type="text" name="from" value="{{Flight.from}}"><br>
+    To: <input type="text" name="to" value="{{Flight.to}}"><br>
+    ETA: <input type="text" name="eta" value="{{Flight.eta}}"><br>
+
+</form>
+<button onclick="updateFlight({{Flight.flightID}})">Update</button>
+</html>

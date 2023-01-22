@@ -1,0 +1,9 @@
+<html>
+<h1>Update {{Passenger.first_name}} {{Passenger.last_name}}:</h1>
+<form id="update-passenger" action="/passenger" method="post">
+    First name: <input type="text" name="first_name" value="{{Passenger.first_name}}"><br>
+    Last name: <input type="text" name="last_name" value="{{Passenger.last_name}}"><br>
+    <!-- flight ID: <input type="text" name="flightID" value="{{Passenger.flightID}}"><br> -->
+</form>
+<button onclick="updatePassenger({{Passenger.accountID}})">Update</button>
+</html>
