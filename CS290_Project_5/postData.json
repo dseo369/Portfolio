@@ -1,0 +1,58 @@
+[
+  {
+    "price": 500,
+    "city": "Eugene",
+    "condition": "poor",
+    "photoURL": "https://i.pinimg.com/originals/07/e0/8c/07e08c1195f197dab954a89723339b3b.jpg",
+    "description": "Super nice laptop"
+  },
+  {
+    "price": 20,
+    "city": "Corvallis",
+    "condition": "excellent",
+    "photoURL": "https://p1.pxfuel.com/preview/998/294/512/meadow-yellow-rain-coat-mountains.jpg",
+    "description": "Yellow Raincoat"
+  },
+  {
+    "price": 100,
+    "city": "Portland",
+    "condition": "new",
+    "photoURL": "http://static-21.sinclairstoryline.com/resources/media/9e359e52-2d79-4aa6-a43b-2ba534b9db0c-large16x9_378b19aa394049a4a9ca7101e4e75be4voodoodoughnutrecord660.jpg?1463527394583",
+    "description": "Very large pile of interesting donuts"
+  },
+  {
+    "price": 250,
+    "city": "Salem",
+    "condition": "fair",
+    "photoURL": "http://static.legalsolutions.thomsonreuters.com/product_photos/p40307624-141728L.jpg",
+    "description": "Oregon laws"
+  },
+  {
+    "price": 1,
+    "city": "Bend",
+    "condition": "new",
+    "photoURL": "http://i.huffpost.com/gen/1573833/images/o-SUNSHINE-facebook.jpg",
+    "description": "Sunshine"
+  },
+  {
+    "price": 99,
+    "city": "Portland",
+    "condition": "fair",
+    "photoURL": "http://www.portlandhipster.com/wp-content/uploads/2015/09/hipsters.jpg",
+    "description": "Hipsters"
+  },
+  {
+    "price": 20000000,
+    "city": "Eugene",
+    "condition": "good",
+    "photoURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/102707-Oregon-AutzenStadium-ext.jpg/1200px-102707-Oregon-AutzenStadium-ext.jpg",
+    "description": "Football stadium (we kind of want to build a new one)"
+  },
+  {
+    "price": 10000,
+    "city": "Corvallis",
+    "condition": "excellent",
+    "photoURL": "https://farm2.staticflickr.com/1258/1366422925_25663f44c8_z.jpg",
+    "description": "Very nice farmer's market"
+  }
+]
