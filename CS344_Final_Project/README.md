@@ -4,6 +4,7 @@ using standard Unix features like input/output redirection, and job control. Fin
 
 Here is some example inputs into command line you could use to run the program:
 $ cat plaintext1
+
 THE RED GOOSE FLIES AT MIDNIGHT STOP
 $ enc_server 57171 &
 $ dec_server 57172 &
